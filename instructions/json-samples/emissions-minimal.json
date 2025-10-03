@@ -1,0 +1,20 @@
+[
+  {
+    "id": 10001,
+    "timeSeries": [
+      {"report_from_utc":"2023-01-01T00:00:00Z","report_to_utc":"2023-01-02T00:00:00","co2_emissions":94.05,"sox_emissions":1.62,"nox_emissions":2.8,"pm_emissions":0.37097,"ch4_emissions":1.51},
+    ]
+  },
+  {
+    "id":10002,
+    "timeSeries":[
+      {"report_from_utc":"2023-01-01T11:00:00","report_to_utc":"2023-01-02T11:00:00","co2_emissions":9.3,"sox_emissions":0.01,"nox_emissions":0.19,"pm_emissions":0.01286,"ch4_emissions":0.145},
+    ]
+  },
+  {
+    "id": 10003,
+    "timeSeries":[
+      {"report_from_utc":"2023-01-02T12:30:00","report_to_utc":"2023-01-02T17:06:00","co2_emissions":8.34,"sox_emissions":0.01,"nox_emissions":0.17,"pm_emissions":0.01153,"ch4_emissions":0.13},
+    ]
+  }
+]
