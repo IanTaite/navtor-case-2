@@ -1,0 +1,41 @@
+/* Dark mode colors for Quartz theme */
+:host ::ng-deep .ag-theme-quartz {
+  --ag-background-color: #1a1a1a;
+  --ag-foreground-color: #ffffff;
+  --ag-header-background-color: #282c34;
+  --ag-header-foreground-color: #ffffff;
+  --ag-odd-row-background-color: #1f1f1f;
+  --ag-row-background-color: #1a1a1a;
+  --ag-row-hover-color: #2a2a2a;
+  --ag-border-color: #404040;
+  --ag-secondary-border-color: #404040;
+  
+  /* Square corners - Quartz theme specific */
+  --ag-wrapper-border-radius: 0px !important;
+  --ag-border-radius: 0px !important;
+  --ag-card-radius: 0px !important;
+  --ag-pill-border-radius: 0px !important;
+  --ag-tab-border-radius: 0px !important;
+  --ag-cell-horizontal-border: solid 1px var(--ag-border-color);
+}
+
+/* Override border-radius on specific elements */
+:host ::ng-deep .ag-theme-quartz .ag-root-wrapper,
+:host ::ng-deep .ag-theme-quartz .ag-root,
+:host ::ng-deep .ag-theme-quartz .ag-header,
+:host ::ng-deep .ag-theme-quartz .ag-header-viewport,
+:host ::ng-deep .ag-theme-quartz .ag-body-viewport {
+  border-radius: 0px !important;
+}
+
+/* Square corners for input elements */
+:host ::ng-deep .ag-theme-quartz input,
+:host ::ng-deep .ag-theme-quartz select,
+:host ::ng-deep .ag-theme-quartz .ag-input-field-input {
+  border-radius: 0px !important;
+}
+
+/* Clickable row cursor */
+:host ::ng-deep .ag-theme-quartz .ag-row {
+  cursor: pointer;
+}

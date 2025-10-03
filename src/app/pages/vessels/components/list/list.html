@@ -1,0 +1,23 @@
+@let loading = loading$ | async; @let items = (items$ | async) ?? []; @let error = error$ | async;
+<div>
+  @if (loading) {
+    <div style="min-height:500px" class="flex justify-center items-center">
+      <div class="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  } @else if (error) {
+    <p>Error: {{ error }}</p>
+  } @else {
+    <div class="ag-theme-quartz" style="width:100%; height:500px">
+      <ag-grid-angular
+        style="width: 100%; height: 100%"
+        [rowData]="items"
+        [columnDefs]="columnDefs"
+        [theme]="gridTheme"
+        (rowClicked)="onRowClicked($event)"
+        (gridReady)="onGridReady()"
+      />
+    </div>
+  }
+</div>
