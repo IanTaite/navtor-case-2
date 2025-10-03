@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "start": "nx serve",
+    "build": "nx build",
+    "watch": "nx build --watch --configuration development",
+    "test": "nx test",
     "format": "prettier --write \"src/**/*.{ts,html,scss,css,json}\"",
     "format:check": "prettier --check \"src/**/*.{ts,html,scss,css,json}\"",
     "swa": "swa"
@@ -33,11 +33,16 @@
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^20.3.3",
+    "@angular-devkit/schematics": "^20.3.3",
     "@angular/build": "^20.3.3",
     "@angular/cli": "^20.3.3",
     "@angular/compiler-cli": "^20.3.0",
     "@azure/static-web-apps-cli": "^2.0.7",
+    "@nx/angular": "21.6.3",
+    "@nx/workspace": "21.6.3",
     "@prettier/plugin-xml": "^3.4.2",
+    "@schematics/angular": "^20.3.3",
     "@types/jasmine": "~5.1.0",
     "jasmine-core": "~5.9.0",
     "karma": "~6.4.0",
@@ -45,8 +50,10 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "nx": "21.6.3",
     "prettier": "^3.6.2",
     "prettier-plugin-organize-imports": "^4.3.0",
     "typescript": "~5.9.2"
-  }
+  },
+  "nx": {}
 }
