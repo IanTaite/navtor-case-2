@@ -7,6 +7,10 @@ export const routes: Routes = [
     component: Shell,
     children: [
       {
+        path: 'emissions',
+        loadChildren: () => import('./pages/emissions/routes').then((m) => m.default),
+      },
+      {
         path: 'vessels',
         loadChildren: () => import('./pages/vessels/routes').then((m) => m.default),
       },

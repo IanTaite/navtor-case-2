@@ -1,0 +1,24 @@
+<form [formGroup]="form" class="flex gap-4">
+  <div class="relative">
+    <select
+      name="vessel"
+      formControlName="vessel"
+      (change)="onVesselChange()"
+      class="appearance-none block w-full pl-4 pr-10 py-3 text-sm text-gray-200 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500 hover:bg-gray-750 transition-all cursor-pointer"
+    >
+      @if (vessels() === null || vessels()!.length === 0) {
+        <option disabled selected>No vessels available</option>
+      } @else {
+        <option disabled selected>Select a vessel</option>
+      }
+      @for (vessel of vessels() ?? []; track vessel.id) {
+        <option [value]="vessel.id">{{ vessel.name }}</option>
+      }
+    </select>
+    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+      <svg class="h-4 w-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </div>
+  </div>
+</form>

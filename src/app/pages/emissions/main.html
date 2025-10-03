@@ -1,0 +1,28 @@
+@let vessels = vessels$ | async;
+@let chosenVessel = chosenVessel$ | async;
+@let chosenVesselName = (chosenVesselName$ | async) || '';
+@let emissionsData = emissionsData$ | async;
+@let loadingEmissions = loadingEmissions$ | async;
+
+<div>
+  <div class="p-4 border-b-2 dark:border-b-slate-900">
+    <h1 class="text-lg font-bold">Emissions</h1>
+  </div>
+  <div class="p-4">
+    <div class="mb-6">
+      <app-emissions-vessel-picker
+       [selectedVesselId]="chosenVessel"
+       [vessels]="vessels"
+       (vesselChanged)="handleVesselChange($event)" />
+    </div>
+    @if (chosenVessel === null) {
+      <p class="p-4 border-2 border-amber-600 text-center">Please select a vessel to view emissions data.</p>
+    } @else if (emissionsData) {
+      <app-emissions-chart
+       [vesselName]="chosenVesselName"
+       [emissionsData]="emissionsData" />
+    } @else if (!loadingEmissions && !emissionsData) {
+      <p class="p-4 border-2 border-amber-600 text-center">There are no emissions data for this vessel.</p>
+    }
+  </div>
+</div>

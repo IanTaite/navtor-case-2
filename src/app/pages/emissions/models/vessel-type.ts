@@ -1,0 +1,15 @@
+export type VesselType =
+  | 'Dry Cargo'
+  | 'General Cargo'
+  | 'Bulk Carrier'
+  | 'Reefer'
+  | 'Container'
+  | 'Liquid Cargo'
+  | 'Crude'
+  | 'Product Carrier'
+  | 'Chemical Carrier'
+  | 'Passenger'
+  | 'Tug'
+  | 'Livestock'
+  | 'Tanker'
+  | 'Dredge';
