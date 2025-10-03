@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+/* Dark mode variant for Tailwind CSS v4 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Set dark mode styles as default */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+}
